@@ -45,16 +45,7 @@ export function Hero({
               />
             </div>
           )}
-          {spreadSecondary?.reference && (
-            <div className="hidden md:block">
-              <SpreadMedia
-                sizes="(min-width: 80em) 700, (min-width: 48em) 450, 500"
-                widths={[450, 700]}
-                width={375}
-                data={spreadSecondary.reference}
-              />
-            </div>
-          )}
+      
         </div>
         <div className="flex flex-col items-baseline justify-between gap-4 px-6 py-8 sm:px-8 md:px-12 bg-gradient-to-t dark:from-contrast/60 dark:text-primary from-primary/60 text-contrast">
           {heading?.value && (

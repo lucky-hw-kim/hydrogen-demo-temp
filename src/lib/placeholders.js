@@ -12,13 +12,13 @@ const PLACEHOLDERS = {
       spread: {
         reference: {
           mediaContentType: 'IMAGE',
-          alt: 'Tracks in the snow leading to a person on a mountain top with a red jacket contrasting to an epic blue horizon with a mountain range in the distance.',
+          alt: 'Multiple feet with shoes on',
           previewImage: {
-            url: 'https://cdn.shopify.com/s/files/1/0551/4566/0472/files/Hydrogen_Hero_Feature_1.jpg?v=1654902468',
+            url: 'https://github.com/lucky-hw-kim/hydrogen-app-demo/blob/main/public/assets/pexels-cottonbro-6153367.jpg?raw=true',
           },
           id: 'gid://shopify/MediaImage/29259478466616',
           image: {
-            url: 'https://cdn.shopify.com/s/files/1/0551/4566/0472/files/Hydrogen_Hero_Feature_1.jpg?v=1654902468',
+            url: 'https://github.com/lucky-hw-kim/hydrogen-app-demo/blob/main/public/assets/pexels-cottonbro-6153367.jpg?raw=true',
             width: 2500,
             height: 3155,
           },
@@ -172,7 +172,19 @@ const PLACEHOLDERS = {
   },
 };
 
-// Return placeholders for collection Heros when metafields are not set
+/**
+ * getHeroPlaceholder() returns placeholder content when the expected metafields
+ * don't exist. Define the following five custom metafields on your Shopify store to override placeholders:
+ * - hero.title             Single line text
+ * - hero.byline            Single line text
+ * - hero.cta               Single line text
+ * - hero.spread            File
+ * - hero.spread_secondary   File
+ *
+ * @see https://help.shopify.com/manual/metafields/metafield-definitions/creating-custom-metafield-definitions
+ * @see https://github.com/Shopify/hydrogen/discussions/1790
+ */
+
 export function getHeroPlaceholder(heros) {
   if (!heros?.length) return [];
 
